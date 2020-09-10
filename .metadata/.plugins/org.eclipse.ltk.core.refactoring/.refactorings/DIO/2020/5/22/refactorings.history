@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;DIO/STD_types.h&apos; to &apos;STD_TYPES.h&apos;" description="Rename resource &apos;STD_types.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="STD_types.h" name="STD_TYPES.h" stamp="1590350051010" updateReferences="true"/>
+</session>

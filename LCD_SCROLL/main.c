@@ -1,0 +1,32 @@
+/*
+ * main.c
+ *
+ *  Created on: May 29, 2020
+ *      Author: my
+ */
+
+/*Standard Types*/
+#include "STD_TYPES.h"
+
+/*Module*/
+#include <util/delay.h>
+#include "DIO_interface.h"
+#include "LCD_interface.h"
+
+void main(void)
+{
+	u8 Local_u8String[] = "Phlimon Fahim Lawand"; //Max 20 Char
+	u8 Local_u8StringSize = (sizeof(Local_u8String) - 1);
+
+	DIO_u8SetPortDirection(LCD_DATA_PORT, DIO_MAX_PORT_VALUE);
+	DIO_u8SetPinDirection(LCD_CONTROL_PORT, LCD_RS_PIN, DIO_OUTPUT);
+	DIO_u8SetPinDirection(LCD_CONTROL_PORT, LCD_RW_PIN, DIO_OUTPUT);
+	DIO_u8SetPinDirection(LCD_CONTROL_PORT, LCD_E_PIN, DIO_OUTPUT);
+
+	LCD_voidInitialization();
+
+	while(1)
+	{
+		LCD_u8StringScroll(Local_u8String, Local_u8StringSize, 500, LCD_SCROLL_TO_LEFT, 0);
+	}
+}

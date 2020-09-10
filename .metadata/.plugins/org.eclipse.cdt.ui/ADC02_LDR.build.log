@@ -1,0 +1,20 @@
+13:07:50 **** Incremental Build of configuration Debug for project ADC02_LDR ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC02_LDR.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13542 bytes (41.3% Full)
+(.text + .data + .bootloader)
+
+Data:        270 bytes (13.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+13:07:50 Build Finished. 0 errors, 0 warnings. (took 297ms)
+

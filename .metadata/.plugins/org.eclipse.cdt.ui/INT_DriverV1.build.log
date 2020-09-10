@@ -1,0 +1,39 @@
+23:36:44 **** Incremental Build of configuration Debug for project INT_DriverV1 ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:32: warning: return type of 'main' is not 'int'
+Finished building: ../main.c
+ 
+Building target: INT_DriverV1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,INT_DriverV1.map -mmcu=atmega32 -o "INT_DriverV1.elf"  ./7SEG_ptogram.o ./BTN_program.o ./DIO_program.o ./INT_program.o ./main.o   
+Finished building target: INT_DriverV1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S INT_DriverV1.elf  >"INT_DriverV1.lss"
+Finished building: INT_DriverV1.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex INT_DriverV1.elf  "INT_DriverV1.hex"
+Finished building: INT_DriverV1.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 INT_DriverV1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7614 bytes (23.2% Full)
+(.text + .data + .bootloader)
+
+Data:         37 bytes (1.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+23:36:45 Build Finished. 0 errors, 1 warnings. (took 958ms)
+

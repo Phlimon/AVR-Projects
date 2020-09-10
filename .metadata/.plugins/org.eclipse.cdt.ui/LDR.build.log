@@ -1,0 +1,45 @@
+20:44:34 **** Incremental Build of configuration Debug for project LDR ****
+make all 
+Building file: ../LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LCD.d" -MT"LCD.o" -c -o "LCD.o" "../LCD.c"
+In file included from ../LCD.c:14:
+d:/phlimon/imt/imt materials/00- tools/imt_tools_x64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from d:/phlimon/imt/imt materials/00- tools/imt_tools_x64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../LCD.c:14:
+d:/phlimon/imt/imt materials/00- tools/imt_tools_x64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../LCD.c:17:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+Finished building: ../LCD.c
+ 
+Building target: LDR.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,LDR.map -mmcu=atmega32 -o "LDR.elf"  ./ADC.o ./DIO.o ./LCD.o ./LED.o ./Timer1.o ./main.o ./timer_zero.o   
+Finished building target: LDR.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S LDR.elf  >"LDR.lss"
+Finished building: LDR.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex LDR.elf  "LDR.hex"
+Finished building: LDR.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 LDR.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7976 bytes (24.3% Full)
+(.text + .data + .bootloader)
+
+Data:          9 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+20:44:35 Build Finished. 0 errors, 3 warnings. (took 1s.16ms)
+

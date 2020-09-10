@@ -1,0 +1,20 @@
+00:58:06 **** Incremental Build of configuration Debug for project LCD_FatlaMan ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 LCD_FatlaMan.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13994 bytes (42.7% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+00:58:07 Build Finished. 0 errors, 0 warnings. (took 252ms)
+

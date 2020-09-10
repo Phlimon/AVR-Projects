@@ -1,0 +1,20 @@
+23:08:54 **** Incremental Build of configuration Debug for project LCD003 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 LCD003.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9034 bytes (27.6% Full)
+(.text + .data + .bootloader)
+
+Data:         16 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+23:08:55 Build Finished. 0 errors, 0 warnings. (took 246ms)
+

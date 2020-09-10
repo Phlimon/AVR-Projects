@@ -1,0 +1,23 @@
+23:20:19 **** Incremental Build of configuration Debug for project LCD03_TOGGLE ****
+make all 
+Building file: ../LCD_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LCD_program.d" -MT"LCD_program.o" -c -o "LCD_program.o" "../LCD_program.c"
+In file included from ../LCD_program.c:16:
+d:/phlimon/imt/imt materials/00- tools/imt_tools_x64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from d:/phlimon/imt/imt materials/00- tools/imt_tools_x64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../LCD_program.c:16:
+d:/phlimon/imt/imt materials/00- tools/imt_tools_x64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../LCD_program.c: In function 'LCD_voidWriteCommand':
+../LCD_program.c:36: error: 'LCD_Control_PORT' undeclared (first use in this function)
+../LCD_program.c:36: error: (Each undeclared identifier is reported only once
+../LCD_program.c:36: error: for each function it appears in.)
+../LCD_program.c:45: error: 'LCD_Data_PORT' undeclared (first use in this function)
+../LCD_program.c: In function 'LCD_voidWriteData':
+../LCD_program.c:64: error: 'LCD_Control_PORT' undeclared (first use in this function)
+../LCD_program.c:73: error: 'LCD_Data_PORT' undeclared (first use in this function)
+make: *** [LCD_program.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+
+23:20:19 Build Failed. 5 errors, 2 warnings. (took 297ms)
+

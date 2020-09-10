@@ -1,0 +1,40 @@
+14:24:10 **** Incremental Build of configuration Debug for project BTN_LED ****
+make all 
+Building file: ../BTN_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"BTN_program.d" -MT"BTN_program.o" -c -o "BTN_program.o" "../BTN_program.c"
+In file included from ../BTN_program.c:12:
+d:/phlimon/imt/imt materials/00- tools/imt_tools_x64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../BTN_program.c
+ 
+Building target: BTN_LED.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,BTN_LED.map -mmcu=atmega32 -o "BTN_LED.elf"  ./BTN_program.o ./DIO_program.o ./LCD_program.o ./main.o   
+Finished building target: BTN_LED.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S BTN_LED.elf  >"BTN_LED.lss"
+Finished building: BTN_LED.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex BTN_LED.elf  "BTN_LED.hex"
+Finished building: BTN_LED.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 BTN_LED.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13234 bytes (40.4% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+14:24:11 Build Finished. 0 errors, 1 warnings. (took 1s.74ms)
+

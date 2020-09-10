@@ -1,0 +1,20 @@
+17:00:32 **** Incremental Build of configuration Debug for project LCD02_NameGoAndBack ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 LCD02_NameGoAndBack.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8984 bytes (27.4% Full)
+(.text + .data + .bootloader)
+
+Data:         16 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+17:00:32 Build Finished. 0 errors, 0 warnings. (took 244ms)
+

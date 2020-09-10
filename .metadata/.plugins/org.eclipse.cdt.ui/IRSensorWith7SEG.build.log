@@ -1,0 +1,20 @@
+02:07:58 **** Incremental Build of configuration Debug for project IRSensorWith7SEG ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 IRSensorWith7SEG.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6902 bytes (21.1% Full)
+(.text + .data + .bootloader)
+
+Data:         36 bytes (1.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+02:07:58 Build Finished. 0 errors, 0 warnings. (took 244ms)
+

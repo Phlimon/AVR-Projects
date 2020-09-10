@@ -1,0 +1,20 @@
+02:09:54 **** Incremental Build of configuration Debug for project LCD_IRCounter ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 LCD_IRCounter.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13026 bytes (39.8% Full)
+(.text + .data + .bootloader)
+
+Data:        280 bytes (13.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+02:09:55 Build Finished. 0 errors, 0 warnings. (took 250ms)
+

@@ -1,0 +1,48 @@
+19:44:39 **** Incremental Build of configuration Debug for project LCD_FinalDriver ****
+make all 
+Building file: ../LCD_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LCD_program.d" -MT"LCD_program.o" -c -o "LCD_program.o" "../LCD_program.c"
+In file included from ../LCD_program.c:12:
+d:/phlimon/imt/imt materials/00- tools/imt_tools_x64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../LCD_program.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:12:
+d:/phlimon/imt/imt materials/00- tools/imt_tools_x64/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:16: warning: return type of 'main' is not 'int'
+Finished building: ../main.c
+ 
+Building target: LCD_FinalDriver.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,LCD_FinalDriver.map -mmcu=atmega32 -o "LCD_FinalDriver.elf"  ./DIO_program.o ./LCD_program.o ./main.o   
+Finished building target: LCD_FinalDriver.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S LCD_FinalDriver.elf  >"LCD_FinalDriver.lss"
+Finished building: LCD_FinalDriver.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex LCD_FinalDriver.elf  "LCD_FinalDriver.hex"
+Finished building: LCD_FinalDriver.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 LCD_FinalDriver.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12284 bytes (37.5% Full)
+(.text + .data + .bootloader)
+
+Data:        284 bytes (13.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+19:44:40 Build Finished. 0 errors, 3 warnings. (took 1s.270ms)
+

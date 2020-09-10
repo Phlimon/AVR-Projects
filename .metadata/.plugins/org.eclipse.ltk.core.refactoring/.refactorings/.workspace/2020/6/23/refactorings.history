@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete 2 resources" deleteContents="false" description="Delete 2 resources" element1="/LCD02/LCD_interface.h" element2="/LCD02/LCD_program.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="2" stamp="1591406590995"/>&#x0A;<refactoring comment="Rename resource &apos;LCD02&apos; to &apos;LCD02_NameGoAndBack&apos;" description="Rename resource &apos;LCD02&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/LCD02" name="LCD02_NameGoAndBack" stamp="1591407017440" updateReferences="true"/>
+</session>

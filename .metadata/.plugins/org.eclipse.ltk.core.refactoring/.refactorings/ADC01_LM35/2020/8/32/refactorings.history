@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ADC01/LM35_interface.c&apos; to &apos;LM35_interface.h&apos;" description="Rename resource &apos;LM35_interface.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="LM35_interface.c" name="LM35_interface.h" stamp="1596666581572" updateReferences="true"/>
+</session>
